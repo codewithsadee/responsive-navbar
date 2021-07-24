@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #e6f2ff;
+}
+
+.container {
+  font-family: sans-serif;
+}
+
+nav.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 10px 20px #00000030;
+          box-shadow: 0 10px 20px #00000030;
+}
+
+nav.navbar .navbar-brand .logo {
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 0 5px 5px #00000030;
+}
+
+nav.navbar .navbar-list .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav.navbar .navbar-list .nav-ul .nav-li {
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+nav.navbar .navbar-list .nav-ul .nav-li:nth-child(1) {
+  margin-left: 0;
+}
+
+nav.navbar .navbar-list .nav-ul .nav-li .nav-link {
+  text-decoration: none;
+  color: #1a1e24;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+nav.navbar .navbar-list .nav-ul .nav-li .nav-link:hover {
+  color: #259dff;
+}
+
+nav.navbar .menu {
+  display: none;
+  cursor: pointer;
+}
+
+nav.navbar .menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background: #259dff;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  nav.navbar .navbar-list {
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-left: 30px;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  nav.navbar .navbar-list .nav-ul {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav.navbar .navbar-list .nav-ul .nav-li {
+    margin: 0 0 10px;
+  }
+  nav.navbar .menu-active {
+    height: 150px;
+  }
+  nav.navbar .menu {
+    display: block;
+  }
+}

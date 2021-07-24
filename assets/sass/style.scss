@@ -1,0 +1,118 @@
+// browser reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 1px solid;
+}
+
+body {
+  background: #e6f2ff;
+}
+
+.container {
+  font-family: sans-serif;
+}
+
+// navbar begin -------------------------------------/
+nav.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px #00000030;
+
+  .navbar-brand {
+
+    .logo {
+      font-size: 36px;
+      font-weight: 600;
+      text-shadow: 0 5px 5px #00000030;
+    }
+  }
+
+  .navbar-list {
+    
+    .nav-ul {
+      display: flex;
+
+      .nav-li {
+        list-style-type: none;
+        margin-left: 30px;
+
+        &:nth-child(1){
+          margin-left: 0;
+        }
+
+        .nav-link {
+          text-decoration: none;
+          color: #1a1e24;
+          font-size: 22px;
+          font-weight: 500;
+
+          &:hover {
+            color:#259dff
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: #259dff;
+      border-radius: 10px;
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+  //navbar begin ----------------------------/
+  nav.navbar {
+
+    .navbar-list {
+      background: #ffffff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding-left: 30px;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
+      transition: all 0.5s ease;
+
+      .nav-ul {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        flex-direction: column;
+
+        .nav-li {
+          margin: 0 0 10px;
+        }
+      }
+    }
+
+    //navbar-list toggle class
+    .menu-active {
+      height: 150px;
+    }
+
+    .menu {
+      display: block;
+    }
+  }
+
+}
